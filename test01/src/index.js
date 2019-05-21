@@ -4,7 +4,23 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+function NumberList(props){
+	const numbers = props.numbers;
+	const listItems = numbers.map((number) => 
+		<li key={number.toString()}>
+			{number}
+		</li>
+	);
+	return (
+		<li>{listItems}</li>
+	);
+} 
+const numbers = [6,7,8,9,0];
 
+ReactDOM.render(
+	<NumberList numbers={numbers} />,
+	document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

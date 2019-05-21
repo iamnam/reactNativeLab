@@ -7,9 +7,13 @@ import * as serviceWorker from './serviceWorker';
 function NumberList(props){
 	const numbers = props.numbers;
 	const listItems = numbers.map((number) => 
-		<li key={number.toString()}></li>
+		<li key={number.toString()}>
+			{number}
+		</li>
 	);
-	return (<li>{number}</li>);
+	return (
+		<li>{listItems}</li>
+	);
 } 
 const numbers = [6,7,8,9,0];
 
