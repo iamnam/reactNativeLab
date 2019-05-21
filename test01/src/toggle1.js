@@ -11,12 +11,13 @@ class Toggle extends React.Component{
 		// bind 아주 중요 
 		// this.handleClick = this.handleClick.bind(this);
 	}
+	// 최신 문법을 사용하면 위의 bind 코드가 없어도 this 가 넘어간다. 
 	handleClick = () => {
-		console.log('this is:', this);
-		console.log(this.isToggleOn)
 		this.setState(prevState => ({
 			isToggleOn: !prevState.isToggleOn
 		}));
+		console.log('this is:', this.state.isToggleOn);
+		console.log(this);
 	}
 	render(){
 		return (
